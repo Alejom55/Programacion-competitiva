@@ -84,24 +84,23 @@ def show_score(list: list):
     for i in list:
         print(i)
 
-game_list = ["1 0 1 / 2 2 X 3 3 X 1 / 3 / X 1 2",
-"1 0 1 / 2 2 X 3 3 X 1 / 3 / 1 / X 8 0",
-"1 0 1 / 2 2 X 3 3 X 1 / 3 / 1 / 8 / 9",
-"X 2 3 X X X X X X X X 1 2"
-]
+#game_list = ["1 0 1 / 2 2 X 3 3 X 1 / 3 / X 1 2",
+#"1 0 1 / 2 2 X 3 3 X 1 / 3 / 1 / X 8 0",
+#"1 0 1 / 2 2 X 3 3 X 1 / 3 / 1 / 8 / 9",
+#"X 2 3 X X X X X X X X 1 2"
+#]
 
-#while True:
-#    inputs = str(input()).strip()
-#    if inputs == "Game Over":
-#        break
-#    elif inputs:
-#        game_list.append(inputs)
+game_list = []
+
+while True:
+    inputs = str(input()).strip()
+    if inputs == "Game Over":
+        break
+    elif inputs:
+        game_list.append(inputs)
 
 
 show_score(calculate_score(game_list))
-#show_score(calculate_score(["X X X X X X X X X X X"]))
-
-#print(couples(game_list[3]))
 
 fin = time.time()
 print(fin-inicio)
